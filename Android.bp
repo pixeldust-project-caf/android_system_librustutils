@@ -22,11 +22,11 @@ rust_library {
     ],
     apex_available: [
         "//apex_available:platform",
-        "com.android.bluetooth",
         "com.android.compos",
         "com.android.uwb",
         "com.android.virt",
     ],
+    vendor_available: true,
     min_sdk_version: "29",
 }
 
@@ -47,13 +47,14 @@ rust_bindgen {
     bindgen_flags: [
         "--size_t-is-usize",
         "--allowlist-function=__system_property_find",
+        "--allowlist-function=__system_property_foreach",
         "--allowlist-function=__system_property_read_callback",
         "--allowlist-function=__system_property_set",
         "--allowlist-function=__system_property_wait",
     ],
+    vendor_available: true,
     apex_available: [
         "//apex_available:platform",
-        "com.android.bluetooth",
         "com.android.compos",
         "com.android.uwb",
         "com.android.virt",
@@ -74,9 +75,9 @@ rust_bindgen {
         "--allowlist-var", "AID_SYSTEM",
         "--allowlist-var", "AID_USER_OFFSET",
     ],
+    vendor_available: true,
     apex_available: [
         "//apex_available:platform",
-        "com.android.bluetooth",
         "com.android.compos",
         "com.android.uwb",
         "com.android.virt",
