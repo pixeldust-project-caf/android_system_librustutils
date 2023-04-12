@@ -29,6 +29,7 @@ rust_library {
         "com.android.virt",
     ],
     vendor_available: true,
+    product_available: true,
     min_sdk_version: "29",
 }
 
@@ -55,6 +56,7 @@ rust_bindgen {
         "--allowlist-function=__system_property_wait",
     ],
     vendor_available: true,
+    product_available: true,
     apex_available: [
         "//apex_available:platform",
         "com.android.btservices",
@@ -80,6 +82,7 @@ rust_bindgen {
         "--allowlist-var", "AID_USER_OFFSET",
     ],
     vendor_available: true,
+    product_available: true,
     apex_available: [
         "//apex_available:platform",
         "com.android.btservices",
